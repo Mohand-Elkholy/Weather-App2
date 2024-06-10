@@ -16,7 +16,7 @@ let day = days[date.getDay()]
 let month = months[date.getMonth()]
 
 async function currentweather(c){
-    let res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${c}&days=3&aqi=yes&alerts=no`)    
+    let res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${c}&days=3&aqi=yes&alerts=no/`)    
     let finall = await res.json()
 
     let wind_dir = finall.current.wind_dir
